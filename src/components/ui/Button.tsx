@@ -1,11 +1,13 @@
 import React from "react";
 import { cva } from "class-variance-authority";
+import { cn } from "../../lib/utils";
 
 type ButtonProps = {
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "outline_primary" | "outline_secondary";
   className?: string;
   size?: "lg" | "md" | "sm" | "sm_icon" | "md_icon" | "lg_icon";
+  textTag?: string;
 };
 
 const buttonVariants = cva(
@@ -15,7 +17,7 @@ const buttonVariants = cva(
       variant: {
         primary: "bg-primary text-white border border-primary_stroke",
         secondary: "bg-secondary border border-secondary_stroke",
-        outline_primary: "border border-primary_stroke text-primary",
+        outline_primary: "border border-primary_stroke text-primary bg-white",
         outline_secondary: "border border-secondary_stroke text-secondary",
       },
       size: {
@@ -39,10 +41,18 @@ const Button: React.FC<ButtonProps> = ({
   size = "sm_icon",
   children,
   className,
+  textTag,
 }) => {
   const computedClassName = buttonVariants({ variant, size });
   return (
-    <button className={`${computedClassName} ${className || ""}`}>
+    <button
+      className={cn(computedClassName, className ? className : "", "relative")}
+    >
+      {textTag && (
+        <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 text-xs mx-auto font-normal bg-text_primary px-2 py-1 rounded">
+          {textTag}
+        </span>
+      )}
       {children}
     </button>
   );

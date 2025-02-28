@@ -44,7 +44,6 @@ export default {
           {
             lineHeight: fontSize.h1 * 1.1 + "rem",
             fontWeight: "700",
-            marginBottom: fontSize.h1 * 1.1 + "rem",
           },
         ],
         h2: [
@@ -52,7 +51,6 @@ export default {
           {
             lineHeight: fontSize.h2 * 1.1 + "rem",
             fontWeight: "700",
-            marginBottom: fontSize.h2 * 1.1 + "rem",
           },
         ],
         h3: [
@@ -60,7 +58,6 @@ export default {
           {
             lineHeight: fontSize.h3 * 1.1 + "rem",
             fontWeight: "700",
-            marginBottom: fontSize.h3 * 1.1 + "rem",
           },
         ],
         h4: [
@@ -68,7 +65,6 @@ export default {
           {
             lineHeight: fontSize.h4 * 1.1 + "rem",
             fontWeight: "700",
-            marginBottom: fontSize.h4 * 1.1 + "rem",
           },
         ],
         h5: [
@@ -76,7 +72,6 @@ export default {
           {
             lineHeight: fontSize.h5 * 1.1 + "rem",
             fontWeight: "700",
-            marginBottom: fontSize.h5 * 1.1 + "rem",
           },
         ],
         h6: [
@@ -84,7 +79,6 @@ export default {
           {
             lineHeight: fontSize.h6 * 1.1 + "rem",
             fontWeight: "600",
-            marginBottom: fontSize.h6 * 1.1 + "rem",
           },
         ],
       },
