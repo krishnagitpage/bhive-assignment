@@ -56,7 +56,9 @@ const Button: React.FC<ButtonProps> = ({
           bg-text_primary 
           px-2 py-1 
           rounded 
-          mx-auto"
+          mx-auto
+          whitespace-nowrap
+          "
         >
           {textTag}
         </span>

@@ -21,20 +21,14 @@ const SpacesListItem: React.FC<{ space: SpaceItemType }> = ({ space }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="">
-            <Button
-              variant="secondary"
-              size="md"
-              className="w-full break-keep "
-            >
-              <div className="flex items-center flex-col">
-                <DirectionIcon />
-                <div className="text-xs mt-2 text-text_secondary font-normal break-keep">
-                  6 kms
-                </div>
+          <Button variant="secondary" size="md" className="w-full">
+            <div className="flex items-center flex-col">
+              <DirectionIcon />
+              <div className="text-xs mt-2 text-text_secondary font-normal whitespace-nowrap">
+                6 kms
               </div>
-            </Button>
-          </div>
+            </div>
+          </Button>
         </a>
       </div>
       <div
