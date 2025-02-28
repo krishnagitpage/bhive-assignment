@@ -4,17 +4,15 @@ import { SpaceItemType } from "./spaceTypes";
 
 export const spacesApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
-    getSpaces: builder.query({
-      async queryFn(_arg, queryApi, extraOptions, fetchWithBQ) {
-        // Attempt to fetch data from the network
-        const result = await fetchWithBQ("/posts");
+    getSpaces: builder.query<SpaceItemType[], void>({
+      async queryFn(_arg, _queryApi, _extraOptions, fetchWithBQ) {
+        // Here is the dummy api fetch returning local json data if network fails
+        const result = await fetchWithBQ("/spaces");
         if (result.error) {
-          // Fallback: return local JSON data if network fetch fails
-          return { data: fakeData as SpaceItemType[] };
+          return { data: fakeData.spaces as SpaceItemType[] };
         }
-        return result;
+        return { data: result.data as SpaceItemType[] };
       },
-      providesTags: ["Post"],
     }),
   }),
 });

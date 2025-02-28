@@ -111,7 +111,12 @@ const ValueProposition = () => {
               <div
                 key={item.id}
                 className={cn(
-                  "xl:col-span-3 lg:col-span-4 col-span-6 xl:h-[80px] lg:h-[100px] bg-white lg:bg-transparent xl:bg-transparent hover:bg-white border-gray-300 border-0",
+                  `xl:col-span-3 lg:col-span-4 col-span-6 
+                  xl:h-[80px] lg:h-[100px]
+                  border-gray-300
+                  bg-white lg:bg-transparent xl:bg-transparent 
+                  hover:bg-white 
+                  border-0`,
                   borderClasses(i)
                 )}
               >

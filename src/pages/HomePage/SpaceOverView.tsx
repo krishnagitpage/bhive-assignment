@@ -1,6 +1,5 @@
 import Container from "../../components/ui/Container";
 import PageSection from "../../components/ui/PageSection";
-import { useGetSpacesQuery } from "../../features/spaces/spacesApiSlice";
 import SpacesListView from "./SpacesListView";
 
 const SpaceOverView = () => {

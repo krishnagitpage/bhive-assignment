@@ -2,14 +2,7 @@ import Container from "../../components/ui/Container";
 
 const HeroComponent = () => {
   return (
-    <div
-      className="lg:bg-[url(/homePageHeroBg1.svg)] bg-no-repeat bg-right-bottom mb-10"
-      style={{
-        backgroundSize: "70%",
-        backgroundPositionX: "left",
-        backgroundPositionY: "center",
-      }}
-    >
+    <div className="lg:bg-[url(/homePageHeroBg1.svg)] bg-no-repeat bg-right-bottom bg-[length:70%] mb-10">
       <Container>
         <div className="flex lg:flex-row flex-col  justify-center items-center gap-3">
           <div className="xl:w-1/3 lg:w-1/2">

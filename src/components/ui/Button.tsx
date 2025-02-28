@@ -49,7 +49,15 @@ const Button: React.FC<ButtonProps> = ({
       className={cn(computedClassName, className ? className : "", "relative")}
     >
       {textTag && (
-        <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 text-xs mx-auto font-normal bg-text_primary px-2 py-1 rounded">
+        <span
+          className="
+          absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 
+          text-xs font-normal 
+          bg-text_primary 
+          px-2 py-1 
+          rounded 
+          mx-auto"
+        >
           {textTag}
         </span>
       )}

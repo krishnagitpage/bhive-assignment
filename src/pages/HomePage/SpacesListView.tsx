@@ -1,4 +1,3 @@
-import React from "react";
 import { useGetSpacesQuery } from "../../features/spaces/spacesApiSlice";
 import SpacesListItem from "./SpacesListItem";
 import { SpaceItemType } from "../../features/spaces/spaceTypes";
@@ -13,11 +12,11 @@ const SpacesListView = () => {
     return <div>Error fetching posts.</div>;
   }
   return (
-    <div className="grid grid-cols-12 items-strech xl:gap-10 gap-5">
+    <div className="grid grid-cols-12 grid-rows-1 items-strech xl:gap-10 gap-3">
       {spaces.map((space: SpaceItemType, i: number) => {
         return (
           <div
-            className="xl:col-span-4 lg:col-span-6 md:col-span-6 col-span-12"
+            className="xl:col-span-4 md:col-span-6 col-span-12 row-span-1"
             key={i}
           >
             <SpacesListItem space={space} />
