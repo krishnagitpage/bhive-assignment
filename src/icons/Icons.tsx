@@ -4,6 +4,11 @@ type IconProps = {
   color?: string;
 };
 
+// classes safe List
+const colorsList = () => (
+  <div className="fill-primary fill-text_primary stroke-primary"></div>
+);
+
 export const DirectionIcon: React.FC<IconProps> = ({
   color = "text_primary",
 }) => (
@@ -35,13 +40,13 @@ export const ThreeChevronRight: React.FC<IconProps> = ({
       fillRule="evenodd"
       clipRule="evenodd"
       d="M13.7071 5.29289C14.0976 5.68342 14.0976 6.31658 13.7071 6.70711L8.70711 11.7071C8.31658 12.0976 7.68342 12.0976 7.29289 11.7071C6.90237 11.3166 6.90237 10.6834 7.29289 10.2929L11.5858 6L7.29289 1.70711C6.90237 1.31658 6.90237 0.683417 7.29289 0.292893C7.68342 -0.0976314 8.31658 -0.0976313 8.70711 0.292893L13.7071 5.29289Z"
-      className={`fill-${color}/60`}
+      className={`fill-${color} opacity-60`}
     />
     <path
       fillRule="evenodd"
       clipRule="evenodd"
       d="M6.70711 5.29289C7.09763 5.68342 7.09763 6.31658 6.70711 6.70711L1.70711 11.7071C1.31658 12.0976 0.683417 12.0976 0.292893 11.7071C-0.0976315 11.3166 -0.0976314 10.6834 0.292893 10.2929L4.58579 6L0.292893 1.70711C-0.097631 1.31658 -0.097631 0.683417 0.292893 0.292893C0.683417 -0.0976314 1.31658 -0.0976313 1.70711 0.292893L6.70711 5.29289Z"
-      className={`fill-${color}/40`}
+      className={`fill-${color} opacity-40`}
     />
     <path
       fillRule="evenodd"
