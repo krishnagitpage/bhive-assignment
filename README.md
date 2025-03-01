@@ -16,6 +16,20 @@
 
 This project is a React application built with the latest technologies, including TypeScript, React-Redux, and RTK Query for state management. It follows a modular architecture and integrates Tailwind CSS for styling.
 
+## Design Theory
+
+This project follows the Atomic Design methodology, which organizes UI components into a hierarchical structure. This approach promotes reusability, scalability, and maintainability.
+
+![Atomic Design Structure](https://miro.medium.com/v2/resize:fit:1400/1*PcQ-m317YX6ct9ccBi6H1Q.png)
+
+### Atomic Design Structure
+
+1. **Atoms**: The smallest building blocks, such as buttons, inputs, and labels.
+2. **Molecules**: Combinations of atoms that form functional units, like a search bar (input + button).
+3. **Organisms**: Complex UI components that consist of multiple molecules, such as a navbar.
+4. **Templates**: Layout structures that define how organisms are placed on a page.
+5. **Pages**: Complete views composed of templates, organisms, molecules, and atoms.
+
 ## Tech Stack
 
 - **React** (Latest version)
@@ -49,7 +63,7 @@ To start the development server, run:
 npm run dev
 ```
 
-This will launch the project in development mode. Open **http://localhost:5173/** (default Vite port) in your browser.
+This will launch the project in development mode. Open **[http://localhost:5173/](http://localhost:5173/)** (default Vite port) in your browser.
 
 ## State Management
 
