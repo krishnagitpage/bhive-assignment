@@ -1,50 +1,133 @@
-# React + TypeScript + Vite
+# React Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Contents
 
-Currently, two official plugins are available:
+- [Overview](#overview)
+- [Tech Stack](#tech-stack)
+- [Installation & Setup](#installation--setup)
+- [Running the Project](#running-the-project)
+- [State Management](#state-management)
+- [Handling Network Failures](#handling-network-failures)
+- [Project Structure](#project-structure)
+- [Configuration](#configuration)
+- [License](#license)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+This project is a React application built using the latest technologies, including TypeScript, React-Redux, and RTK Query for state management. It follows a modular structure and integrates Tailwind CSS for styling.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+- **React** (Latest version)
+- **TypeScript** (Latest version)
+- **Vite** (Fast build tool and development server)
+- **Tailwind CSS v3** (Utility-first CSS framework)
+- **React-Redux & RTK Query** (State management and API queries)
+- **Node.js** v22.13.1
+- **npm** v11.1.0
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
+## Installation & Setup
+
+Ensure you have **Node.js** installed. If not, download and install it from [Node.js Official Website](https://nodejs.org/).
+
+### Steps to Install
+
+```bash
+# Clone the repository
+git clone https://github.com/krishnagitpage/bhive-assignment.git
+cd <project_directory>
+
+# Install dependencies
+npm install
+```
+
+## Running the Project
+
+To start the development server, use the following command:
+
+```bash
+npm run dev
+```
+
+This will launch the project in development mode. Open **http://localhost:5173/** (default Vite port) in your browser.
+
+## State Management
+
+This project utilizes **React-Redux** with **RTK Query** for state and API management:
+
+- **React-Redux**: Provides a centralized state management solution.
+- **RTK Query**: Handles data fetching efficiently with built-in caching and automatic re-fetching.
+
+### Implementation
+
+- The Redux store is configured in `store.ts`.
+- Features are managed using Redux slices.
+- API calls are structured using **RTK Query** services.
+
+## Mocking network requests
+
+Mock data is used as a fallback mechanism:
+
+- API responses are checked, and if the request fails, predefined mock data is returned.
+
+## Project Structure
+
+```
+├── src
+│   ├── components  # UI components
+        ├── Atoms   # single level components like buttons and page sections
+        ├── Molecules
+        ├── Organisms
+        ├── Templates
+│   ├── pages       # Page-level components
+        ├── HomePage
+│   ├── app       # Redux store and slices
+        ├── api
+           ├── apiSlice.ts
+        ├── store
+           ├── store.ts
+│   ├── features    # API services using RTK Query
+        ├── spaces
+           ├── spacesApiSlice.ts
+           ├── spaceTypes.ts
+    ├── icons
+    ├── lib
+    ├── mocks
+      ├── fakeData.json
+│   ├── App.tsx     # Main application component
+│   ├── main.tsx    # Entry point with React and Redux provider
+│   ├── tailwind.config.ts # Tailwind CSS customization
+│
+├── public          # Static assets
+├── package.json    # Project dependencies and scripts
+├── vite.config.ts  # Vite configuration file
+└── README.md       # Project documentation
+```
+
+## Configuration
+
+### Tailwind CSS Customization
+
+Tailwind CSS is configured by extending `tailwind.config.ts`:
+
+#### Example
+
+```ts
+export default {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#1E40AF",
+        secondary: "#9333EA",
+      },
     },
   },
-})
+  plugins: [],
+};
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+This allows for custom design configurations and theme extensions.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## License
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+This project is for educational and interview purposes only.
