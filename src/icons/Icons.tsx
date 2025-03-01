@@ -5,6 +5,7 @@ type IconProps = {
 };
 
 // classes safe List
+// @ts-ignore
 const colorsList = () => (
   <div className="fill-primary fill-text_primary stroke-primary"></div>
 );

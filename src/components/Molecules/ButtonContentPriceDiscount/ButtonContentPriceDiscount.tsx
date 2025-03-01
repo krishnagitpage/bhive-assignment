@@ -1,4 +1,4 @@
-import { ThreeChevronRight } from "../../../icons/icons";
+import { ThreeChevronRight } from "../../../icons/Icons";
 import { cn } from "../../../lib/utils";
 import Button from "../../Atoms/Button";
 

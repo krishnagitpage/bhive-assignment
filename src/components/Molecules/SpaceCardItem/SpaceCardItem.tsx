@@ -2,7 +2,7 @@ import React from "react";
 import { SpaceItemType } from "../../../features/spaces/spaceTypes";
 
 import Button from "../../Atoms/Button";
-import { DirectionIcon, Honeykomb } from "../../../icons/icons";
+import { DirectionIcon, Honeykomb } from "../../../icons/Icons";
 import ButtonContentPriceDiscount from "../ButtonContentPriceDiscount/ButtonContentPriceDiscount";
 
 const SpaceCardItem: React.FC<{ space: SpaceItemType }> = ({ space }) => {

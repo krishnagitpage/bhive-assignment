@@ -1,4 +1,4 @@
-import { PhoneIcon } from "../../../icons/icons";
+import { PhoneIcon } from "../../../icons/Icons";
 import Button from "../../Atoms/Button";
 import Container from "../../Atoms/Container";
 
