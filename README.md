@@ -7,7 +7,7 @@
 - [Installation & Setup](#installation--setup)
 - [Running the Project](#running-the-project)
 - [State Management](#state-management)
-- [Handling Network Failures](#handling-network-failures)
+- [Mocking network requests](#mocking-network-requests)
 - [Project Structure](#project-structure)
 - [Configuration](#configuration)
 - [License](#license)
@@ -35,7 +35,7 @@ Ensure you have **Node.js** installed. If not, download and install it from [Nod
 ```bash
 # Clone the repository
 git clone https://github.com/krishnagitpage/bhive-assignment.git
-cd <project_directory>
+cd bhive-assignment
 
 # Install dependencies
 npm install
