@@ -1,7 +1,7 @@
-import HeroComponent from "./HeroComponent";
-import ValueProposition from "./ValueProposition";
-import SpaceOverView from "./SpaceOverView";
-import CTASection from "./CTASection";
+import HeroComponent from "../../components/Templates/HeroComponent";
+import ValueProposition from "../../components/Templates/ValueProposition";
+import SpaceOverView from "../../components/Templates/SpaceOverView";
+import CTASection from "../../components/Templates/CTASection";
 
 const HomePage = () => {
   return (

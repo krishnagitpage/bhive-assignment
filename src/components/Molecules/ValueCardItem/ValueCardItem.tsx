@@ -1,11 +1,11 @@
-import { ValuePropositionItemType } from "./Types";
-import { cn } from "../../lib/utils";
+import { ValueCardType } from "./ValueCardTypes";
+import { cn } from "../../../lib/utils";
 
-const ValueItem = ({
+const ValueCardItem = ({
   item,
   className = "",
 }: {
-  item: ValuePropositionItemType;
+  item: ValueCardType;
   className?: string;
 }) => {
   return (
@@ -55,4 +55,4 @@ const ValueItem = ({
   );
 };
 
-export default ValueItem;
+export default ValueCardItem;

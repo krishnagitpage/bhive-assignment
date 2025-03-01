@@ -1,6 +1,6 @@
-import { PhoneIcon } from "../icons/icons";
-import Button from "./ui/Button";
-import Container from "./ui/Container";
+import { PhoneIcon } from "../../../icons/icons";
+import Button from "../../Atoms/Button";
+import Container from "../../Atoms/Container";
 
 const Header = () => {
   return (

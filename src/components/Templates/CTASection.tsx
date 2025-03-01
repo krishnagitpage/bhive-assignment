@@ -1,5 +1,5 @@
-import Container from "../../components/ui/Container";
-import PageSection from "../../components/ui/PageSection";
+import Container from "../Atoms/Container";
+import PageSection from "../Atoms/PageSection";
 
 const CTASection = () => {
   return (

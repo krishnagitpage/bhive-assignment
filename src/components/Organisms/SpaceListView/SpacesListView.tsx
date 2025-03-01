@@ -1,6 +1,5 @@
-import { useGetSpacesQuery } from "../../features/spaces/spacesApiSlice";
-import SpacesListItem from "./SpacesListItem";
-import { SpaceItemType } from "../../features/spaces/spaceTypes";
+import { useGetSpacesQuery } from "../../../features/spaces/spacesApiSlice";
+import SpaceCardItem from "../../Molecules/SpaceCardItem/SpaceCardItem";
 
 const SpacesListView = () => {
   const { data: spaces = [], isLoading, isError } = useGetSpacesQuery();
@@ -11,15 +10,16 @@ const SpacesListView = () => {
   if (isError) {
     return <div>Error fetching posts.</div>;
   }
+
   return (
     <div className="grid grid-cols-12 grid-rows-1 items-strech xl:gap-10 gap-3">
-      {spaces.map((space: SpaceItemType, i: number) => {
+      {spaces.map((space, i) => {
         return (
           <div
             className="xl:col-span-4 md:col-span-6 col-span-12 row-span-1"
             key={i}
           >
-            <SpacesListItem space={space} />
+            <SpaceCardItem space={space} />
           </div>
         );
       })}

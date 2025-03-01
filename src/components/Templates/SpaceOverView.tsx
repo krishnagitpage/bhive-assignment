@@ -1,6 +1,6 @@
-import Container from "../../components/ui/Container";
-import PageSection from "../../components/ui/PageSection";
-import SpacesListView from "./SpacesListView";
+import Container from "../Atoms/Container";
+import PageSection from "../Atoms/PageSection";
+import SpacesListView from "../Organisms/SpaceListView/SpacesListView";
 
 const SpaceOverView = () => {
   return (
